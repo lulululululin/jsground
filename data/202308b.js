@@ -22,7 +22,7 @@ contentlist.push({
         "还有C语言, 算法, 美学书, 摄影书...还有密码学, 研究不了? 咱以前还做个版套字体呢. 在家干待了小十年, 就作出这么个东西."
     ],
     'isshit':true,
-    'linesshow':-1, // [-1]: show all lines;   [0]: hide;   [n>0]: show n lines;   [null or don't set]: default show 3 lines.
+    'show':-1, // [-1]: show all lines;   [0]: hide;   [n>0]: show n lines;   [null or don't set]: default show 3 lines.
 })
 
 
