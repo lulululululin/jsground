@@ -41,7 +41,9 @@ function blog_from(contentlist){
 
     let ulroot = document.querySelector("#ul_blog")
     for (let ii = 0; ii<contentlist.length; ii++) {
-        addListItm(contentlist[ii],ulroot)
+        if (contentlist[ii].isshit==true){
+            addListItm(contentlist[ii],ulroot)
+        }
     }
 }
 
