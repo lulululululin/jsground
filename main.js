@@ -1,17 +1,17 @@
 function page_main(){
-    let maindiv = document.createElement("div")
-    maindiv.id = "main"
+    let oDIV_main = document.createElement("div")
+    oDIV_main.id = "main"
 
-    let logoh1 = document.createElement("h1")
-    logoh1.id = "logo"
-    logoh1.innerHTML = "小路"
-    maindiv.appendChild(logoh1)
+    let oH1_logo = document.createElement("h1")
+    oH1_logo.id = "logo"
+    oH1_logo.innerHTML = "小路"
+    oDIV_main.appendChild(oH1_logo)
 
-    let blogul = document.createElement("ul")
-    blogul.id = "ul_blog"
-    maindiv.appendChild(blogul)
+    let oUL_blog = document.createElement("ul")
+    oUL_blog.id = "ul_blog"
+    oDIV_main.appendChild(oUL_blog)
 
-    document.body.appendChild(maindiv)
+    document.body.appendChild(oDIV_main)
 
 }
 

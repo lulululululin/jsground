@@ -10,6 +10,40 @@
 // }) 
 
 
+
+contentlist.push({
+    'title':'关于变量命名的问题',
+    'date':"2023.08.22",
+    'para':[
+        "每种编程语言都有自己的一套书写风格. 记不住怎么办? 学了两种就搞混了, 再学第三种, 前面两种都忘了. ",
+        "所以干脆自己给自己定一套命名规则吧, 不管用什么语言都这么整.",
+        "方案1: ",
+        "第一个字母是变量类型的缩写, 如果是DOM后面接dom的类型, 比如p,h1,div什么的. (但别的语言也不涉及到这些东西啊.) 再后面, 接dom的id. (这应该是dom的命名规则.)",
+        "函数声明中的形参应该也有自己的命名规则. 比如`pm`开头, 后面接变量类型比如`pmInt_`, 然后后面再接个有意义的名字, 而且一个函数的形参可能是它内部函数的实参. 这就有点乱了",
+    ],
+    'isshit':true,
+    'show':-1, 
+    // [-1]: show all lines;   [0]: hide;   [n>0]: show n lines;   [null or don't set]: default show 3 lines.
+    // excrete, 排泄
+})
+
+
+/*
+
+形参是parameter，实参是argument。
+
+paragraph
+段, 段落, 款, 一段
+
+passage
+通道, 篇 文章, 段落, 推移, 流逝, 通行
+
+para
+段, 旁, 帕拉, 巴拉, 段落
+
+*/
+
+
 contentlist.push({
     'title':'过去的事, 就让他过去吧.',
     'date':"2023.08.22",
@@ -23,7 +57,7 @@ contentlist.push({
         "为什么不直接在多级目录下用文本文件记录日志呢? 因为网页比文本文件回顾方便. 文本文件无法格式化, 阅读起来太难受了."
     ],
     'isshit':true,
-    'show':-1, // [-1]: show all lines;   [0]: hide;   [n>0]: show n lines;   [null or don't set]: default show 3 lines.
+    'show':null, 
 })
 
 
