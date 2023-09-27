@@ -50,9 +50,7 @@ function blog_from(pmArr_logs){
 
     let ulroot = document.querySelector("#ul_blog")
     for (let ii = 0; ii<pmArr_logs.length; ii++) {
-        if (pmArr_logs[ii].isshit==true){
-            fLoglist_add(pmArr_logs[ii],ulroot)
-        }
+        fLoglist_add(pmArr_logs[ii],ulroot)
     }
 }
 
