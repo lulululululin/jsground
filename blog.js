@@ -54,3 +54,7 @@ function blog_from(pmArr_logs){
     }
 }
 
+function markright(linestr){
+    // my 'markdown' interpreter
+
+}
