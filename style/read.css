@@ -1,0 +1,17 @@
+body { background: #007; line-height: 160%;}
+body {color: rgba(255, 255, 255, 0.5); width: 70%; padding: 15%; float: none; display: block;} 
+table { border-collapse:collapse;}
+tr,td,img {margin: 0; border: 0; padding: 0; font-size: 0;}
+a {color: #fff;}
+h1,h2,h3,h4,h5,h6,h7 { margin-bottom: 0; line-height: 111%;}
+h11 { font-size: 11px; margin: 0;}
+
+.talk_kiwi { background-color: #005; padding: 2em; font-size: 11px; }
+.talk_kiwi > div { margin: 0 0 1em; line-height: 150%;}
+.talk_kiwi > .talk0 { color: #fff; font-weight: bolder;}
+.talk_kiwi > .talk0::before { content: "ME: "; }
+.talk_kiwi > .talk1 { color: rgb(255, 255, 255, 0.6);}
+.talk_kiwi > .talk1::before { content: "Kiwi: "; }
+
+
+

@@ -5,3 +5,8 @@ p { text-indent: 0em; line-height: 150%; margin: 3px 0;}
 span.pp { display: none;}
 li.blogitem > h3 { margin-bottom: 4px;}
 li.blogitem > div.date { color: blue; font-size: smaller; }
+.navcss { list-style: none; display: flex;}
+.btncss { padding-right: 15px; text-transform: uppercase;}
+.readitmcss a { color: #fff; text-decoration: none;}
+
+

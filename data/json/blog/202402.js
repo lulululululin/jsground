@@ -1,8 +1,8 @@
 
-// contentlist.push({
+// loglist.push({
 //     'title':'Template',
 //     'date':"2023.08.19",
-//     'para':[
+//     'log_content':[
 //         "",
 //         "",
 //         "",
@@ -10,11 +10,20 @@
 // }) 
 
 
-contentlist.push({
-    'title':'ass hole in my mind.',
-    'date':"2023.08.21",
-    'para':[
-        "我们高贵的灵魂都想快点去死！",
-        "我又回来了。又埋了一波。这个小站应该改名叫小埋。"
+loglist.push({
+    'title':'高贵的灵魂，自然都希望能快一点，回天上去。',
+    'date':"2024.02.26",
+    'log_content':[
+        "慢性子都不是什么好东西。",
+        "马斯克肯定是被火星鬼上了身。",
+        "我又回来了。",
+        "又埋了一波。",
+        "本巨站应否改名叫“小埋”。"
     ]
 }) 
+
+readlist.push({
+    'title':'The Limits of Art',
+    'log_content':"./data/html/the_limits_of_art.html"
+}) 
+

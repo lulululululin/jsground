@@ -1,8 +1,8 @@
 
-// contentlist.push({
+// loglist.push({
 //     'title':'Template',
 //     'date':"2023.08.19",
-//     'para':[
+//     'log_content':[
 //         "",
 //         "",
 //         "",
@@ -10,10 +10,10 @@
 // }) 
 
 
-contentlist.push({
+loglist.push({
     'title':'ass hole in my mind.',
     'date':"2023.08.21",
-    'para':[
+    'log_content':[
         "markdown is really good thing, but too complex. but maybe the value is at this point? complex? may be json is the better choice? ",
         "不如把数据直接放在js文件里, 就像现在这样, 保存为对象, 里面可以有数组和别的什么, 这样就免得再用json函数来回转换了. 还省去了用ajax家在json. 我这一万多的学费真真的白搭了.忘了个精光. 这个破输入法究竟用的什么智能? ",
         "why made this so poor page, because it feels peace, 踏实 (just now, a sound in my mind raise:'(this is a )中国人', than he said:'废了'(he's Over), may be it is all my illusion, But I really really belive that they are Monitor everything about me, into my mind directly. 为什么我自觉的自己是个'美国的卖国贼'? (为什么翻译到这里我还觉得有那么点羞耻呢?) 因为这些废话, 偶尔会在脑袋里飘过. 也许中国的技术根本监控不了网络数据? 只能直接盯着我的脑袋? 否则的话, 何必呢? 我为什么要用英文? 因为, 和离婚一个原因----除了背叛, 我还能怎样呢? 偷偷摸摸的背叛, 毫无价值. 我卖个屁阿? 作为一个中国人? 有什么好卖的? 除了可笑的面子? 什么叫'卖国'? 就这么个破年代? 什么叫卖国? 你们巴不得的卖不出去! 都是烂货!), 露天席地的感觉, 永远不用担心喜新厌旧的情况发生，这个东西也不会变得更加臃肿，只有内容数据越来越多而以。",
@@ -50,10 +50,10 @@ contentlist.push({
     A,B,C 的最终结果, 可能是整数, 分数, 小数, 或者整十整百。
 */
 
-contentlist.push({
+loglist.push({
     'title':'Template',
     'date':"2023.08.21",
-    'para':[
+    'log_content':[
 
         "a1. 乘法 a*b<br/> a2. 括号加减&乘法 (a+b)*c<br/> a3. 括号加减乘以括号加减 (a+b)*(c+d)<br/> a4. 括号加减乘法再加减 (a+b)*c+d",
     
@@ -66,18 +66,18 @@ contentlist.push({
     ]
 }) 
 
-contentlist.push({
+loglist.push({
     'title':'Ghost in my computer',
     'date':"2023.08.20",
-    'para':[
+    'log_content':[
         "Just 1 minuts ago, i confused the syntax of js and python, the computer struck dumb. then the response on screen start to later 2 or 3 seconds. just like a confused man. Hesitated to let me enter those confusing statements.",
     ]
 }) 
 
-contentlist.push({
+loglist.push({
     'title':'"习惯"vs"都忘了"',
     'date':"2023.08.19",
-    'para':[
+    'log_content':[
         "今天, 咱们的小网页增加了javascript功能。本来早早就学的不错的javascript, 学完了python和c就都忘了。不过一开始做的还是顺风顺水的怎么写怎么好使。直到去菜鸟网查了一个<code>foreach</code>。本来是要查<code>for in</code>的, 结果却在bing搜索中输入了<code>foreach</code>。结果再回来写脚本就怎么写怎么错。箭头函数难道不能直接后面接括号条用么？",
         "标题里的‘都忘了’说的就是这个事, 学了一门语言, 在学别的就会被覆盖, 习惯说的是另外一件事。忘了是什么了。之所以忘了, 肯定是还没成习惯？那学习究竟有多大意义呢？",
         "另外, Nginx也没学进去。",
@@ -98,10 +98,10 @@ contentlist.push({
 })
 
 
-contentlist.push({
+loglist.push({
     'title':'关于为什么会做那一些莫名奇妙好事的思考',
     'date':"2023.08.19",
-    'para':[
+    'log_content':[
         "主要是刚刚学习了一下nginx, 没必要啊, 上有xmapps, 下有python.http.server. <span class='pp'>要多方便有多方便. </span>",
         "但是, 这都不是行业标准. 要么臃肿不堪, 要么不好扩展, 暂时用用还行. ",
 
@@ -109,10 +109,10 @@ contentlist.push({
 })
 
 
-contentlist.push({
+loglist.push({
     'title':'关于网站目录结构的思考',
     'date':"2023.08.19",
-    'para':[
+    'log_content':[
         "我应该是做网站的老手了. 怎么忘记网站里图片和js什么的怎么放了呢.",
         "MDN 上说, 通常, 有三个文件夹: images, styles, scripts. 这我是了解的. 但 images 可能会有两种: 网站的样式用图, 比如图标啊, 按钮背景什么的, 这些东西现在越来越少用到了. 另外还有一些是数据图片, 比如文章里的照片和插图. 虽然他们都是图片, 但考虑到用途不同, 何不分开存放? ",
         "暂且设置一个 data 文件夹, 一个 style 文件夹, 一个 assets 文件夹... assets 是什么意思? ",

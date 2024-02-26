@@ -1,19 +1,40 @@
-function page_main(){
-    let oDIV_main = document.createElement("div")
-    oDIV_main.id = "main"
 
-    let oH1_logo = document.createElement("h1")
-    oH1_logo.id = "logo"
-    oH1_logo.innerHTML = "小路"
-    oDIV_main.appendChild(oH1_logo)
-
-    let oUL_blog = document.createElement("ul")
-    oUL_blog.id = "ul_blog"
-    oDIV_main.appendChild(oUL_blog)
-
-    document.body.appendChild(oDIV_main)
-
+var create_sth = function(elm,pElm,id,ih,clslst){
+    var oItem = document.createElement(elm);
+    oItem.id = id;
+    oItem.classList = elm+"css "+clslst;
+    oItem.innerHTML = ih;
+    pElm.appendChild(oItem);
+    return oItem;
 }
 
-let contentlist = []
+function page_main(){
+    
+    let oDIV_main = create_sth("div",document.body,"main","","maincss");
+
+    let oH1_logo = create_sth("h1",oDIV_main,"logo","小路","logocss");
+
+    let oUL_func_nav = create_sth("ul",oDIV_main,"ul_func_nav","","navcss");
+    let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"ul_func_nav","<a href='/?blog'>blog</a>","btncss");
+    let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a href='/?spirit'>tao</a>","btncss");
+    let oLI_navbtn_read = create_sth("li",oUL_func_nav,"ul_func_nav","<a href='/?read'>reading</a>","btncss");
+
+    oLI_navbtn_blog.addEventListener("click",()=>{
+        listblog()
+    })
+    oLI_navbtn_tao.addEventListener("click",()=>{
+        // tao()
+    })
+    oLI_navbtn_read.addEventListener("click",()=>{
+        listread()
+    })
+
+    
+
+    let oUL_contents = create_sth("ul",oDIV_main,"ul_content_list","","contentlistcss");
+    
+}
+
+let loglist = []
+let readlist = []
 

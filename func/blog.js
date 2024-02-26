@@ -1,6 +1,12 @@
 // 这么简陋, 也能用
 
-function blog_from(pmArr_logs){
+function listblog(){
+
+    pmArr_logs = loglist
+    // loglist was defined in "main.js"
+    
+    let content_wrapper = document.querySelector("#ul_content_list")
+    content_wrapper.innerHTML = ""
 
     let fLog_title = (pmStr_title,pmLI_log)=>{
         let oH3_logtitle = document.createElement("h3")
@@ -38,17 +44,17 @@ function blog_from(pmArr_logs){
     let fLoglist_add = (pmOjb_content,listRoot)=>{
         
         let oLI_log = document.createElement("li")
-        oLI_log.classList = "blogitem"
+        oLI_log.classList = "blogitemcss"
 
         fLog_title(pmOjb_content['title'],oLI_log)
         fLog_date(pmOjb_content['date'],oLI_log)
-        fLog_paragraph(pmOjb_content['para'],pmOjb_content['show'],oLI_log)
+        fLog_paragraph(pmOjb_content['log_content'],pmOjb_content['show'],oLI_log)
 
         listRoot.appendChild(oLI_log)
 
     }
 
-    let ulroot = document.querySelector("#ul_blog")
+    let ulroot = document.querySelector("#ul_content_list")
     for (let ii = 0; ii<pmArr_logs.length; ii++) {
         fLoglist_add(pmArr_logs[ii],ulroot)
     }
