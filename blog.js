@@ -1,4 +1,4 @@
-// 这么简陋, 也能用, 也有点条例是不? 也算点价值.
+// 这么简陋, 也能用
 
 function blog_from(pmArr_logs){
 
