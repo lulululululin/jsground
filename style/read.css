@@ -3,7 +3,7 @@ body {color: rgba(255, 255, 255, 0.5); width: 70%; padding: 15%; float: none; di
 table { border-collapse:collapse;}
 tr,td,img {margin: 0; border: 0; padding: 0; font-size: 0;}
 a {color: #fff;}
-h1,h2,h3,h4,h5,h6,h7 { margin-bottom: 0; line-height: 111%;}
+h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15 { margin-bottom: 0; line-height: 111%; color: #fff;}
 h11 { font-size: 11px; margin: 0;}
 
 .talk_kiwi { background-color: #005; padding: 2em; font-size: 11px; }

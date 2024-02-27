@@ -7,6 +7,8 @@ li.blogitem > h3 { margin-bottom: 4px;}
 li.blogitem > div.date { color: blue; font-size: smaller; }
 .navcss { list-style: none; display: flex;}
 .btncss { padding-right: 15px; text-transform: uppercase;}
+.btncss > a { color: #66f;}
+.btncss > a:hover { color: #fff; cursor: pointer;}
 .readitmcss a { color: #fff; text-decoration: none;}
 
 

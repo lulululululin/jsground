@@ -15,9 +15,9 @@ function page_main(){
     let oH1_logo = create_sth("h1",oDIV_main,"logo","小路","logocss");
 
     let oUL_func_nav = create_sth("ul",oDIV_main,"ul_func_nav","","navcss");
-    let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"ul_func_nav","<a href='/?blog'>blog</a>","btncss");
-    let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a href='/?spirit'>tao</a>","btncss");
-    let oLI_navbtn_read = create_sth("li",oUL_func_nav,"ul_func_nav","<a href='/?read'>reading</a>","btncss");
+    let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"ul_func_nav","<a>blog</a>","btncss");
+    let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a>tao</a>","btncss");
+    let oLI_navbtn_read = create_sth("li",oUL_func_nav,"ul_func_nav","<a>reading</a>","btncss");
 
     oLI_navbtn_blog.addEventListener("click",()=>{
         listblog()
