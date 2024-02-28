@@ -2,6 +2,7 @@
 let oLI_readitem = []
 
 function listread(){
+    document.body.classList = "read"
     let content_wrapper = document.querySelector("#ul_content_list")
     content_wrapper.innerHTML = ""
     for (let itm in readlist){

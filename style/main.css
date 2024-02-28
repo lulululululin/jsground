@@ -1,4 +1,4 @@
-body { background: #007; color: #798;}
+body { background: #007; color: #798; margin:12%;}
 #main { width: 100%; max-width: 1002px; margin: 0 auto;}
 li {padding: 10px 0;}
 p { text-indent: 0em; line-height: 150%; margin: 3px 0;}
@@ -7,8 +7,19 @@ li.blogitem > h3 { margin-bottom: 4px;}
 li.blogitem > div.date { color: blue; font-size: smaller; }
 .navcss { list-style: none; display: flex;}
 .btncss { padding-right: 15px; text-transform: uppercase;}
+.btncss > small { font-size: 1px; }
 .btncss > a { color: #66f;}
 .btncss > a:hover { color: #fff; cursor: pointer;}
 .readitmcss a { color: #fff; text-decoration: none;}
 
-
+body.think #ul_content_list,
+body.think #ul_content_list>li { display: block;}
+body.think #ul_content_list { position: relative;}
+body.think #ul_content_list > li {
+    background-color: #6f6;
+    position: absolute;
+    padding: 10px; cursor:move;
+}
+body.think #ul_content_list > li span {
+    color: #000;
+}

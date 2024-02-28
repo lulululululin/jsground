@@ -15,9 +15,11 @@ function page_main(){
     let oH1_logo = create_sth("h1",oDIV_main,"logo","小路","logocss");
 
     let oUL_func_nav = create_sth("ul",oDIV_main,"ul_func_nav","","navcss");
-    let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"ul_func_nav","<a>blog</a>","btncss");
-    let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a>tao</a>","btncss");
     let oLI_navbtn_read = create_sth("li",oUL_func_nav,"ul_func_nav","<a>reading</a>","btncss");
+    let oLI_navbtn_thinking = create_sth("li",oUL_func_nav,"ul_func_nav","<a>thinking</a>","btncss");
+    let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"ul_func_nav","<a>log</a>","btncss");
+    let oLI_navbtn_and = create_sth("li",oUL_func_nav,"ul_func_nav","<small>and ...how 2</small>","btncss");
+    let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a>tao</a>","btncss");
 
     oLI_navbtn_blog.addEventListener("click",()=>{
         listblog()
@@ -27,6 +29,9 @@ function page_main(){
     })
     oLI_navbtn_read.addEventListener("click",()=>{
         listread()
+    })
+    oLI_navbtn_thinking.addEventListener("click",()=>{
+        thinking()
     })
 
     

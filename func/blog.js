@@ -1,6 +1,7 @@
 // 这么简陋, 也能用
 
 function listblog(){
+    document.body.classList = "log"
 
     pmArr_logs = loglist
     // loglist was defined in "main.js"
