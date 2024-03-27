@@ -15,11 +15,12 @@ li.blogitem > div.date { color: blue; font-size: smaller; }
 body.think #ul_content_list,
 body.think #ul_content_list>li { display: block;}
 body.think #ul_content_list { position: relative;}
-body.think #ul_content_list > li {
+body.think li.li_Think_node{
     background-color: #6f6;
     position: absolute;
     padding: 10px; cursor:move;
+    list-style: none;
 }
-body.think #ul_content_list > li span {
+body.think li.li_Think_node span {
     color: #000;
 }
