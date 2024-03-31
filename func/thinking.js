@@ -9,21 +9,21 @@ function thinking(){
 
     content_wrapper.innerHTML = ""
 
-    last_topic = money[money.length-1]
+    last_topic = thoughts[thoughts.length-1]
 
     for (let itm in last_topic){
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
         if (last_topic[itm]['posi']==undefined){
             last_topic[itm]['posi'] = {}
-            last_topic[itm]['posi']['xx'] = Math.random()*window.innerWidth*0.76
-            last_topic[itm]['posi']['yy'] = Math.random()*(window.innerHeight - window.innerWidth*0.24-150)
+            last_topic[itm]['posi']['xx'] = parseInt(Math.random()*window.innerWidth*0.76)+"px"
+            last_topic[itm]['posi']['yy'] = parseInt(Math.random()*(window.innerHeight - window.innerWidth*0.24-150))+"px"
         }
         
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
-        let node = create_sth("li",content_wrapper,"read_itm","<span mean='"+ money[money.length-1][itm]['mean_from_cn'] +"'>"+ money[money.length-1][itm]['eng_word'][0] +"</span>","readitmcss");
+        let node = create_sth("li",content_wrapper,"read_itm","<span mean='"+ thoughts[thoughts.length-1][itm]['mean_from_cn'] +"'>"+ thoughts[thoughts.length-1][itm]['eng_word'][0] +"</span>","readitmcss");
         node.classList = "li_Think_node"
-        node.style.left = last_topic[itm]['posi']['xx']+"px"
-        node.style.top = last_topic[itm]['posi']['yy']+"px"
+        node.style.left = last_topic[itm]['posi']['xx']
+        node.style.top = last_topic[itm]['posi']['yy']
         node.draggable = true
         oLI_thinking[itm] = node
         
@@ -39,6 +39,14 @@ function thinking(){
             function moveAt(somenode, pageX, pageY){
                 somenode.style.left = pageX - somenode.offsetWidth / 2 + 'px'
                 somenode.style.top = pageY - somenode.offsetHeight / 2 + 'px'
+
+                
+                wrapperbox = content_wrapper.getBoundingClientRect()
+
+            
+
+                last_topic[itm]['posi']['xx'] = (parseInt(somenode.style.left) - wrapperbox.x) + "px"
+                last_topic[itm]['posi']['yy'] = (parseInt(somenode.style.top) - wrapperbox.y) + "px"
             }
 
             function onMouseMove(event){
@@ -53,6 +61,10 @@ function thinking(){
                 document.removeEventListener('mousemove', onMouseMove)
                 node.onmouseup=null
             }
+            
+
+            console.log(last_topic)
+
         }
 
 
@@ -61,7 +73,6 @@ function thinking(){
         // https://developer.mozilla.org/en-US/docs/Web/Events
         // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent
     }
-    console.log(money[money.length-1])
 }
 
 let move_thinkNode = function(node){

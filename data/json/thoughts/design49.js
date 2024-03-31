@@ -1,4 +1,4 @@
-let money = [
+let thoughts = [
   [
     { 'eng_word': ["risk"], "mean_from_cn": "体验设计" },
     { 'eng_word': ["out"], "mean_from_cn": "色彩" },
@@ -13,12 +13,12 @@ let money = [
     { 'eng_word': ["conceptual design"], "mean_from_cn": "概念设计" },
     { 'eng_word': ["improvisation"], "mean_from_cn": "即兴创作" },
     { 'eng_word': ["Arrange fonts and images"], "mean_from_cn": "编排字体与图像" },
-    { 'eng_word': ["Identification words "], "mean_from_cn": "标识字" },
-    { 'eng_word': ["Carved fonts "], "mean_from_cn": "雕琢字体" },
-    { 'eng_word': ["Letters as images "], "mean_from_cn": "字母作为图像" },
+    { 'eng_word': [" Identification words "], "mean_from_cn": "标识字" },
+    { 'eng_word': [" Carved fonts "], "mean_from_cn": "雕琢字体" },
+    { 'eng_word': [" Letters as images "], "mean_from_cn": "字母作为图像" },
     { 'eng_word': ["Blur"], "mean_from_cn": "模糊 " },
     { 'eng_word': ["number"], "mean_from_cn": "数字" },
-    { 'eng_word': ["Punctuation marks "], "mean_from_cn": "标点符号" },
+    { 'eng_word': [" Punctuation marks "], "mean_from_cn": "标点符号" },
     { 'eng_word': ["deformation"], "mean_from_cn": "变形" },
     { 'eng_word': ["Visual Pun"], "mean_from_cn": "视觉双关" },
     { 'eng_word': ["hallucination"], "mean_from_cn": "幻觉" },
