@@ -33,6 +33,9 @@ function listblog(){
             if ((pmINT_show==null)) {
                 pmINT_show=3
             }
+            else if ((pmINT_show==true)) {
+                pmINT_show=30000000
+            }
 
             if ((idx>pmINT_show-2) && (pmINT_show>0) ) {
                 // 大于1, 会显示3段, 分别是0,1,2, 
