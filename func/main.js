@@ -12,7 +12,7 @@ function page_main(){
     
     let oDIV_main = create_sth("div",document.body,"main","","maincss");
 
-    let oH1_logo = create_sth("h1",oDIV_main,"logo","小路","logocss");
+    let oH1_logo = create_sth("h1",oDIV_main,"logo","Geekii","logocss");
 
     let oUL_func_nav = create_sth("ul",oDIV_main,"ul_func_nav","","navcss");
     let oLI_navbtn_read = create_sth("li",oUL_func_nav,"ul_func_nav","<a>reading</a>","btncss");
