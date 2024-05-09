@@ -8,6 +8,16 @@ var create_sth = function(elm,pElm,id,ih,clslst){
     return oItem;
 }
 
+async function clear_thought_nodes(){
+    let thoughtnodes = document.querySelectorAll("body > li.li_Think_node")
+    if (thoughtnodes.length > 0){
+        for (let itm in thoughtnodes){
+            console.log(typeof(thoughtnodes[itm]))
+            thoughtnodes[itm].remove()
+        }
+    }
+}
+
 function page_main(){
     
     let oDIV_main = create_sth("div",document.body,"main","","maincss");
@@ -22,15 +32,19 @@ function page_main(){
     let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a>tao</a>","btncss");
 
     oLI_navbtn_blog.addEventListener("click",()=>{
+        clear_thought_nodes()
         listblog()
     })
     oLI_navbtn_tao.addEventListener("click",()=>{
+        clear_thought_nodes()
         // tao()
     })
     oLI_navbtn_read.addEventListener("click",()=>{
+        clear_thought_nodes()
         listread()
     })
     oLI_navbtn_thinking.addEventListener("click",()=>{
+        clear_thought_nodes()
         thinking()
     })
 

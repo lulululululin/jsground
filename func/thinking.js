@@ -37,7 +37,6 @@ function thinking(){
             node.style.visibility = 'hidden'
             event.preventDefault();
 
-
             document.body.append(node)
     
             function moveAt(somenode, pageX, pageY){
