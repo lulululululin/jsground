@@ -22,10 +22,6 @@ loglist.push({
     ]
 }) 
 
-readlist.push({
-    'title':'The Limits of Art',
-    'log_content':"./data/html/the_limits_of_art.html"
-}) 
 
 loglist.push({
     'title':'一动不能动',

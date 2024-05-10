@@ -25,8 +25,12 @@ loglist.push({
         "它们肯定是有本质上的区别，否则不会换一个词。",
         "是不是可以有 subsubsubchapter 呢？",
         "中文里连“次章”都没有吧？是怎么处理的呢？",
-        "难怪我的网名是 “etfolin”。"
     ],
     'show':true
 }) 
 
+
+readlist.push({
+    'title':'The Limits of Art',
+    'log_content':"./data/html/the_limits_of_art.html"
+}) 
