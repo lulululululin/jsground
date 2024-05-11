@@ -27,6 +27,7 @@ function page_main(){
     let oUL_func_nav = create_sth("ul",oDIV_main,"ul_func_nav","","navcss");
     let oLI_navbtn_read = create_sth("li",oUL_func_nav,"ul_func_nav","<a>reading</a>","btncss");
     let oLI_navbtn_thinking = create_sth("li",oUL_func_nav,"ul_func_nav","<a>thinking</a>","btncss");
+    console.log(typeof(oLI_navbtn_thinking))
     let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"ul_func_nav","<a>log</a>","btncss");
     let oLI_navbtn_and = create_sth("li",oUL_func_nav,"ul_func_nav","<small>and ...how 2</small>","btncss");
     let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a>tao</a>","btncss");
@@ -49,6 +50,9 @@ function page_main(){
     })
 
     
+    oLI_navbtn_thinking.remove()
+    oLI_navbtn_and.remove()
+    oLI_navbtn_tao.remove()
 
     let oUL_contents = create_sth("ul",oDIV_main,"ul_content_list","","contentlistcss");
     
