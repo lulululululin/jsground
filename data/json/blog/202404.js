@@ -12,6 +12,7 @@
 
 loglist.push({
     'title':'书籍内容的分层',
+    'slug':'booklevel',
     'date':"2024.04.05",
     'log_content':[
         "在我“处理”一本书的时候，突然想到在英语里是如何给书籍的内容分层的呢？",
@@ -26,6 +27,22 @@ loglist.push({
         "是不是可以有 subsubsubchapter 呢？",
         "中文里连“次章”都没有吧？是怎么处理的呢？",
     ],
+    'p5s':null,
+    'show':true
+}) 
+
+letian.push({
+    'title':'没啥说的了',
+    'slug':'nothing2say',
+    'date':"2024.04.05",
+    'log_content':[
+        "刚开始做这个小网站的时候，我话还挺多的。",
+        "最近不知道怎么的没什么好说的了，",
+        "只好给这个朴素到家的手工静态网站引进点西方先进的技术了。",
+        "P5js，是鼎鼎大名的Processing的javascript版",
+        "我倒更愿意称其为“青春版Processing”",
+    ],
+    'p5s':1,
     'show':true
 }) 
 

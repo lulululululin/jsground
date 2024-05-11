@@ -1,4 +1,4 @@
-let siteTitle = "极客II艺术"
+let siteTitle = "极客与艺术"
 
 var create_sth = function(elm,pElm,id,ih,clslst){
     var oItem = document.createElement(elm);
@@ -63,4 +63,6 @@ function page_main(){
 
 let loglist = []
 let readlist = []
+
+let letian
 
