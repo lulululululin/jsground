@@ -1,5 +1,7 @@
-body { background: #007; color: #798; margin:12%;}
+body { background: #007; color: #798; margin:12%; margin-bottom: 0;}
 #main { width: 100%; max-width: 1002px; margin: 0 auto;}
+ul { padding: 0; margin: 0; list-style: none;}
+#ul_func_nav { border-bottom: 1px solid rgba(255,255,255,0.25); border-left: none; border-right: none;}
 li {padding: 10px 0;}
 p { text-indent: 0em; line-height: 150%; margin: 3px 0;}
 span.pp { display: none;}
@@ -26,4 +28,6 @@ body.think li.li_Think_node span {
     color: #000;
 }
 
-#beianlink { position: absolute; right: 12px; bottom: 12px; font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none;}
+
+#beian_footer { text-align: right; margin-top: 100px; margin-bottom: 20px;}
+#beianlink { position: static; right: 12px; bottom: 12px; font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; background: #007;}

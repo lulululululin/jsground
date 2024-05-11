@@ -22,15 +22,15 @@ function page_main(){
     
     let oDIV_main = create_sth("div",document.body,"main","","maincss");
 
-    let oH1_logo = create_sth("h1",oDIV_main,"logo","Geekii","logocss");
+    let oH1_logo = create_sth("h1",oDIV_main,"logo","极客与艺术","logocss");
 
     let oUL_func_nav = create_sth("ul",oDIV_main,"ul_func_nav","","navcss");
-    let oLI_navbtn_read = create_sth("li",oUL_func_nav,"ul_func_nav","<a>reading</a>","btncss");
-    let oLI_navbtn_thinking = create_sth("li",oUL_func_nav,"ul_func_nav","<a>thinking</a>","btncss");
+    let oLI_navbtn_read = create_sth("li",oUL_func_nav,"oLI_navbtn_read","<a>reading</a>","btncss");
+    let oLI_navbtn_thinking = create_sth("li",oUL_func_nav,"oLI_navbtn_thinking","<a>thinking</a>","btncss");
     console.log(typeof(oLI_navbtn_thinking))
-    let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"ul_func_nav","<a>log</a>","btncss");
-    let oLI_navbtn_and = create_sth("li",oUL_func_nav,"ul_func_nav","<small>and ...how 2</small>","btncss");
-    let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"ul_func_nav","<a>tao</a>","btncss");
+    let oLI_navbtn_blog = create_sth("li",oUL_func_nav,"oLI_navbtn_blog","<a>log</a>","btncss");
+    let oLI_navbtn_and = create_sth("li",oUL_func_nav,"oLI_navbtn_and","<small>and ...how 2</small>","btncss");
+    let oLI_navbtn_tao = create_sth("li",oUL_func_nav,"oLI_navbtn_tao","<a>tao</a>","btncss");
 
     oLI_navbtn_blog.addEventListener("click",()=>{
         clear_thought_nodes()
@@ -56,6 +56,9 @@ function page_main(){
 
     let oUL_contents = create_sth("ul",oDIV_main,"ul_content_list","","contentlistcss");
     
+    let beian_footer = create_sth("div",document.body,"beian_footer",'<a id="beianlink" href="https://beian.miit.gov.cn/" target="_blank">黑ICP备2024022813号</a>',"");
+
+
 }
 
 let loglist = []
