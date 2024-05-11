@@ -25,3 +25,5 @@ body.think li.li_Think_node{
 body.think li.li_Think_node span {
     color: #000;
 }
+
+#beianlink { position: absolute; right: 12px; bottom: 12px; font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none;}
