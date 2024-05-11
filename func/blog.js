@@ -46,14 +46,15 @@ function listblog(){
     }
 
     let fLog_p5s = (pmStr_date,pmLI_log)=>{
-        
-        // create_sth(elm,pElm,id,ih,clslst)
-        let p5sdiv = create_sth("div",pmLI_log,"p5s"+String(pmStr_date),"","p5sdivcls")
-        let p5sa = create_sth("a",p5sdiv,"p5sa"+String(pmStr_date),"","p5sacls")
-        p5sa.href = "/data/p5s/"+String(pmStr_date)+".html"
-        p5sa.target = "_blank"
-        let p5simg = create_sth("img",p5sa,"p5simg"+String(pmStr_date),"","p5simgcls")
-        p5simg.src = "/data/p5s/"+String(pmStr_date)+".jpg"
+        if (pmStr_date>0){
+            // create_sth(elm,pElm,id,ih,clslst)
+            let p5sdiv = create_sth("div",pmLI_log,"p5s"+String(pmStr_date),"","p5sdivcls")
+            let p5sa = create_sth("a",p5sdiv,"p5sa"+String(pmStr_date),"","p5sacls")
+            p5sa.href = "/data/p5s/"+String(pmStr_date)+".html"
+            p5sa.target = "_blank"
+            let p5simg = create_sth("img",p5sa,"p5simg"+String(pmStr_date),"","p5simgcls")
+            p5simg.src = "/data/p5s/"+String(pmStr_date)+".jpg"
+        }
     }
 
     let fLoglist_add = (pmOjb_content,listRoot)=>{
@@ -64,6 +65,7 @@ function listblog(){
 
         fLog_title(pmOjb_content['title'],oLI_log)
         fLog_date(pmOjb_content['date'],oLI_log)
+
         fLog_p5s(pmOjb_content['p5s'],oLI_log)
         fLog_paragraph(pmOjb_content['log_content'],pmOjb_content['show'],oLI_log)
 

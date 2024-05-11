@@ -64,5 +64,5 @@ function page_main(){
 let loglist = []
 let readlist = []
 
-let letian
+let letian = []
 
