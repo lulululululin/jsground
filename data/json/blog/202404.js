@@ -31,7 +31,7 @@ loglist.push({
     'show':true
 }) 
 
-loglist.push({
+letian.push({
     'title':'没啥说的了',
     'slug':'nothing2say',
     'date':"2024.04.05",
