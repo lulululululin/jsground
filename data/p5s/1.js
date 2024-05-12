@@ -2,6 +2,8 @@
 
 let objCvs;  // for Image File Saving.
 
+let cvs = new Cvs([640,480],1,0);
+
 // sz: size
 let sz = cvs.size()
 // NaN set
@@ -52,22 +54,23 @@ function setup() {
   objCvs = createCanvas(...sz);
   background(...colorBg);
   blendMode(BLEND);
-}
 
-function draw() {
   let iiww = 0.22*sz[0]
   let iihh = 0.22*sz[0]
   let iixx = 0.5*(sz[0]-iiww)
   let iiyy = 0.5*(sz[1]-iihh)
-  background(...colorBg);
-  fill(0,50)
-  noStroke()
-  rect(iixx,iiyy,iiww,iihh)
 
+  background(...colorBg);
+  stroke(0,100)
+  noFill()
+  rect(iixx,iiyy,iiww,iihh)
 
   let ii = new Logoii(iisz=[iiww,iihh],xx=iixx,yy=iiyy,egap=0.333,elen=0.5,eelengap=0.25)
 
   ii.init()
+}
+
+function draw() {
 
   // colorSquire();
   // showInfo();

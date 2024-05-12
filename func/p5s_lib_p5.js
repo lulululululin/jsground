@@ -30,7 +30,6 @@ class Cvs {
 	}
 }
 
-let cvs = new Cvs([640,640],1,0);
 
 
 
