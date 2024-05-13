@@ -29,7 +29,7 @@ loglist.push({
     ],
     'p5s':null,
     'show':true
-}) 
+})
 
 letian.push({
     'title':'没啥说的了',
@@ -43,12 +43,11 @@ letian.push({
         "我倒更愿意称其为“青春版Processing”",
         "这次的p5js脚本是刚学p5js的时候写的一套准备给自己套用的模板，",
         "有个简单而不好看的调色盘，",
-        "刚刚又在封面上加了一个相同水准geekii标志……",
-        "祝我好运吧。上帝保佑！"
+        "刚刚又上加了一个相同水准geekii标志……",
     ],
     'p5s':1,
     'show':true
-}) 
+})
 
 
 readlist.push({

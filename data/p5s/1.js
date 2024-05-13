@@ -16,28 +16,51 @@ function Logoii(iisz,xx,yy,egap,elen,eelengap){
   // ii: whole ii logo
   // e: eye or ear, gl/iisz[1]
   // eelengap: ear_len(or eyeeargap) / iisz[1]
+  this.sz = iisz
+  this.xx = xx
+  this.yy = yy
+  this.egap = egap
+  this.elen = elen
+  this.eelengap = eelengap
   
   this.sz = iisz
-  let ww = this.sz[0]
-  let hh = this.sz[1]
+  this.ww = this.sz[0]
+  this.hh = this.sz[1]
 
-
-  let ear_l_top = [xx+0.5*(1-egap)*ww,yy+(0.5-elen)*hh]
-  let ear_l_btm = [xx+0.5*(1-egap)*ww,yy+0.5*hh]
-  let ear_r_top = [xx+0.5*(1+egap)*ww,yy+(0.5-elen)*hh]
-  let ear_r_btm = [xx+0.5*(1+egap)*ww,yy+0.5*hh]
-  this.ear_l = [...ear_l_top,...ear_l_top,...ear_l_btm,...ear_l_btm]
-  this.ear_r = [...ear_r_top,...ear_r_top,...ear_r_btm,...ear_r_btm]
-
-  let eye_l_top = [xx+0.5*(1-egap)*ww,yy+(0.5+eelengap*1)*hh]
-  let eye_l_btm = [xx+0.5*(1-egap)*ww,yy+(0.5+eelengap*1.1)*hh]
-  let eye_r_top = [xx+0.5*(1+egap)*ww,yy+(0.5+eelengap*1)*hh]
-  let eye_r_btm = [xx+0.5*(1+egap)*ww,yy+(0.5+eelengap*1.1)*hh]
-  this.eye_l = [...eye_l_top,...eye_l_top,...eye_l_btm,...eye_l_btm]
-  this.eye_r = [...eye_r_top,...eye_r_top,...eye_r_btm,...eye_r_btm]
 }
 
 Logoii.prototype.init = function(){
+  
+  this.ear_l_top    = [this.xx + 0.5 * (1 - this.egap) * this.ww,this.yy + (0.5 - this.elen) * this.hh]
+  this.ear_l_t_bar  = [this.xx + 0.5 * (1 - this.egap) * this.ww,this.yy + (0.5 - this.elen) * this.hh]
+
+  this.ear_l_btm    = [this.xx + 0.5 * (1 - this.egap) * this.ww,this.yy + 0.5 * this.hh]
+  this.ear_l_b_bar  = [this.xx + 0.5 * (1 - this.egap) * this.ww,this.yy + 0.5 * this.hh]
+
+  this.ear_r_top    = [this.xx + 0.5 * (1 + this.egap) * this.ww,this.yy + (0.5 - this.elen) * this.hh]
+  this.ear_r_t_bar  = [this.xx + 0.5 * (1 + this.egap) * this.ww,this.yy + (0.5 - this.elen) * this.hh]
+
+  this.ear_r_btm    = [this.xx + 0.5 * (1 + this.egap) * this.ww,this.yy + 0.5 * this.hh]
+  this.ear_r_b_bar  = [this.xx + 0.5 * (1 + this.egap) * this.ww,this.yy + 0.5 * this.hh]
+
+  this.ear_l = [...this.ear_l_top,...this.ear_l_t_bar,...this.ear_l_btm,...this.ear_l_b_bar]
+  this.ear_r = [...this.ear_r_top,...this.ear_r_t_bar,...this.ear_r_btm,...this.ear_r_b_bar]
+  
+  this.eye_l_top = [this.xx + 0.5 * (1 - this.egap) * this.ww,this.yy + (0.5 + this.eelengap * 1) * this.hh]
+  this.eye_l_btm = [this.xx + 0.5 * (1 - this.egap) * this.ww,this.yy + (0.5 + this.eelengap * 1.1) * this.hh]
+
+  this.eye_r_top = [this.xx + 0.5 * (1 + this.egap) * this.ww,this.yy + (0.5 + this.eelengap * 1) * this.hh]
+  this.eye_r_btm = [this.xx + 0.5 * (1 + this.egap) * this.ww,this.yy + (0.5 + this.eelengap * 1.1) * this.hh]
+
+  this.eye_l = [...this.eye_l_top,...this.eye_l_top,...this.eye_l_btm,...this.eye_l_btm]
+  this.eye_r = [...this.eye_r_top,...this.eye_r_top,...this.eye_r_btm,...this.eye_r_btm]
+
+}
+Logoii.prototype.show = function(){
+  
+  fill(0,100)
+  noStroke()
+  rect(this.xx,this.yy,...this.sz)
 
   noFill();
   stroke(255);
@@ -47,30 +70,30 @@ Logoii.prototype.init = function(){
   bezier(...this.ear_r)
   bezier(...this.eye_l)
   bezier(...this.eye_r)
-}
 
+}
+let ii,iiww,iihh,iixx,iiyy
 function setup() {
   
   objCvs = createCanvas(...sz);
   background(...colorBg);
   blendMode(BLEND);
 
-  let iiww = 0.22*sz[0]
-  let iihh = 0.22*sz[0]
-  let iixx = 0.5*(sz[0]-iiww)
-  let iiyy = 0.5*(sz[1]-iihh)
+  iiww = 0.22 * sz[0]
+  iihh = 0.22 * sz[0]
+  iixx = 0.5 * (sz[0] - iiww)
+  iiyy = 0.5 * (sz[1] - iihh)
 
-  background(...colorBg);
-  stroke(0,100)
-  noFill()
-  rect(iixx,iiyy,iiww,iihh)
+  ii = new Logoii(iisz=[iiww,iihh],xx=iixx,yy=iiyy,egap=1/3,elen=0.5,eelengap=0.25)
 
-  let ii = new Logoii(iisz=[iiww,iihh],xx=iixx,yy=iiyy,egap=0.333,elen=0.5,eelengap=0.25)
-
-  ii.init()
 }
 
 function draw() {
+
+  background(...colorBg);
+
+  ii.init()
+  ii.show()
 
   // colorSquire();
   // showInfo();
@@ -107,10 +130,10 @@ function mousePressed(){
 function mouseReleased(){
   mdv.push(mouseX);
   mdv.push(mouseY);
-  mdv.push((mdv[2]-mdv[0])/1);  //[4]
-  mdv.push((mdv[3]-mdv[1])/1);  //[5]
-  mdv.push((mdv[2]-mdv[0])/width);  //[6]
-  mdv.push((mdv[3]-mdv[1])/height); //[7]
+  mdv.push((mdv[2] - mdv[0])/1);  //[4]
+  mdv.push((mdv[3] - mdv[1])/1);  //[5]
+  mdv.push((mdv[2] - mdv[0])/width);  //[6]
+  mdv.push((mdv[3] - mdv[1])/height); //[7]
   startDraw=1;
 
 }
@@ -128,9 +151,9 @@ function mouseDragged(){
   else if (mouseButton === RIGHT) {
     text("I dont have middle button",cvs.center()[0],cvs.center()[1]);
   }
-  clear();
-  colorSquire();
-  showInfo();
-  background(...colorBg);
+  // clear();
+  // colorSquire();
+  // showInfo();
+  // background(...colorBg);
   
 }
