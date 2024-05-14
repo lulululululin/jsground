@@ -10,22 +10,24 @@
 // }) 
 
 
+
 loglist.push({
-    'title':'书籍内容的分层',
-    'slug':'booklevel',
-    'date':"2024.04.05",
+    'title':'关于阅读',
+    'slug':'aboutreading',
+    'date':"2024.05.15",
     'log_content':[
-        "在我“处理”一本书的时候，突然想到在英语里是如何给书籍的内容分层的呢？",
-        "比如 Chapter 和 section。",
-        "上网查了一下，大概是这样的： part / chapter / section / paragraph",
-        "然后呢，还有 subpart / subchapter / subsection / subparagraph",
-        "然后呢，又发现了一篇文章叫：",
-        "<a target='_blank' href='https://thecontentauthority.com/blog/chapter-vs-subchapter'>“Chapter vs Subchapter: When to Opt for One Term Over Another”</a>",
-        "不知道都说了啥。因为很长。",
-        "然而最难区分的我觉得是 subchapter 和 section。",
-        "它们肯定是有本质上的区别，否则不会换一个词。",
-        "是不是可以有 subsubsubchapter 呢？",
-        "中文里连“次章”都没有吧？是怎么处理的呢？",
+        "说实话我并没有阅读原文，我读的主要是机器翻译。",
+        "但并不信任机器翻译，所以得意地在上面附了英文原文。",
+        "在翻译结果莫名其妙的时候再上去对照",
+        "然后再写下自己认为更通顺的翻译。",
+        "在这个过程中我觉得自己不得不和作者在精神上合一一下",
+        "但有时又并不甘于认同作者写的内容",
+        "于是这里就有话说了……免得咱网站没什么内容。",
+        "关于艺术啊，《The Limits of Art》的作者可能并没有把古希腊美学理念考虑进去。",
+        "我也不想说的太多。一方面不符合咱行文风格，二也是显得我没有情商似的。",
+        "主要是二！二！",
+        "……",
+        "读着瞧吧。",
     ],
     'p5s':null,
     'show':true
@@ -54,27 +56,25 @@ loglist.push({
 })
 
 loglist.push({
-    'title':'关于阅读',
-    'slug':'aboutreading',
-    'date':"2024.05.15",
+    'title':'书籍内容的分层',
+    'slug':'booklevel',
+    'date':"2024.04.05",
     'log_content':[
-        "说实话我并没有阅读原文，我读的主要是机器翻译。",
-        "但并不信任机器翻译，所以得意地在上面附了英文原文。",
-        "在翻译结果莫名其妙的时候再上去对照",
-        "然后再写下自己认为更通顺的翻译。",
-        "在这个过程中我觉得自己不得不和作者在精神上合一一下",
-        "但有时又并不甘于认同作者写的内容",
-        "于是这里就有话说了……免得咱网站没什么内容。",
-        "关于艺术啊，《The Limits of Art》的作者可能并没有把古希腊美学理念考虑进去。",
-        "我也不想说的太多。一方面不符合咱行文风格，二也是显得我没有情商似的。",
-        "主要是二！二！",
-        "……",
-        "读着瞧吧。",
+        "在我“处理”一本书的时候，突然想到在英语里是如何给书籍的内容分层的呢？",
+        "比如 Chapter 和 section。",
+        "上网查了一下，大概是这样的： part / chapter / section / paragraph",
+        "然后呢，还有 subpart / subchapter / subsection / subparagraph",
+        "然后呢，又发现了一篇文章叫：",
+        "<a target='_blank' href='https://thecontentauthority.com/blog/chapter-vs-subchapter'>“Chapter vs Subchapter: When to Opt for One Term Over Another”</a>",
+        "不知道都说了啥。因为很长。",
+        "然而最难区分的我觉得是 subchapter 和 section。",
+        "它们肯定是有本质上的区别，否则不会换一个词。",
+        "是不是可以有 subsubsubchapter 呢？",
+        "中文里连“次章”都没有吧？是怎么处理的呢？",
     ],
     'p5s':null,
     'show':true
 })
-
 
 readlist.push({
     'title':'The Limits of Art',
