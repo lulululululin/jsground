@@ -151,9 +151,9 @@ function mouseDragged(){
   else if (mouseButton === RIGHT) {
     text("I dont have middle button",cvs.center()[0],cvs.center()[1]);
   }
-  // clear();
-  // colorSquire();
-  // showInfo();
-  // background(...colorBg);
+  clear();
+  colorSquire();
+  showInfo();
+  background(...colorBg);
   
 }
