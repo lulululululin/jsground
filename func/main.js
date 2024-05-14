@@ -55,8 +55,6 @@ function page_main(){
     oLI_navbtn_tao.remove()
 
     let oUL_contents = create_sth("ul",oDIV_main,"ul_content_list","","contentlistcss");
-    
-    let beian_footer = create_sth("div",document.body,"beian_footer",'<a id="beianlink" href="https://beian.miit.gov.cn/" target="_blank">黑ICP备2024022813号</a>',"");
 
 
 }

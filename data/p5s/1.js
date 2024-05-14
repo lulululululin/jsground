@@ -58,12 +58,12 @@ Logoii.prototype.init = function(){
 }
 Logoii.prototype.show = function(){
   
-  fill(0,100)
+  fill(...colorMid)
   noStroke()
   rect(this.xx,this.yy,...this.sz)
 
   noFill();
-  stroke(255);
+  stroke(...colorFront);
   strokeWeight(24);
 
   bezier(...this.ear_l)
@@ -89,8 +89,6 @@ function setup() {
 }
 
 function draw() {
-
-  background(...colorBg);
 
   ii.init()
   ii.show()

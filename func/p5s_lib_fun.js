@@ -1,13 +1,13 @@
 
-function rangeValue(arr,range=101){
+function loop_in_range(arr,range=101){
   for (let i=0;i<arr.length;i++){
     arr[i] = mathRound(arr[i]%range,0);
   }
   return arr;
 }
 
-function mathRound(val,decimalPlaces=2){
-  return(Number((((Math.round(val*(10**decimalPlaces)))/(10**(decimalPlaces))).toFixed(decimalPlaces))));
+function mathRound(decimal,fractionPlaces=2){
+  return(Number((((Math.round(decimal*(10**fractionPlaces)))/(10**(fractionPlaces))).toFixed(fractionPlaces))));
 }
 
 function deepClone2(obj) {

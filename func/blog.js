@@ -53,7 +53,7 @@ function listblog(){
             p5sa.href = "/data/p5s/"+String(pmStr_date)+".html"
             p5sa.target = "_blank"
             let p5simg = create_sth("img",p5sa,"p5simg"+String(pmStr_date),"","p5simgcls")
-            p5simg.src = "/data/p5s/"+String(pmStr_date)+".jpg"
+            p5simg.src = "/data/p5s/"+String(pmStr_date)+".png"
         }
     }
 

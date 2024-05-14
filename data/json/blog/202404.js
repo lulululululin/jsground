@@ -10,8 +10,18 @@
 // }) 
 
 
+loglist.push({
+    'title':'错误的科赫曲线',
+    'slug':'koch',
+    'date':"2024.05.15",
+    'log_content':[
+        "三角函数解错了。截图留念。",
+    ],
+    'p5s':2,
+    'show':true
+})
 
-letian.push({
+loglist.push({
     'title':'关于阅读',
     'slug':'aboutreading',
     'date':"2024.05.15",
@@ -32,7 +42,7 @@ letian.push({
     'show':true
 })
 
-letian.push({
+loglist.push({
     'title':'没啥说的了',
     'slug':'nothing2say',
     'date':"2024.05.15",
