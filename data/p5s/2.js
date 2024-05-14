@@ -34,7 +34,7 @@ function setup() {
 
     let alpha = Math.atan((dd[1]-aa[1])/(dd[0]-aa[0]))*180/Math.PI
     let beta = alpha - 60
-    let aaee = ((dd[0]-aa[0])**2+(dd[1]-aa[1])**2)**0.5
+    let aaee = ((dd[0]-aa[0])**2+(dd[1]-aa[1])**2)**0.5/3**0.5
 
     console.log(alpha)
 
@@ -66,7 +66,7 @@ function setup() {
 
   }
 
-  unitdraw([333,50],[500,200])
+  unitdraw([0,0],[500,200])
 
 }
 
