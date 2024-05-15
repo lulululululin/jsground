@@ -50,7 +50,7 @@ function page_main(){
     })
 
     
-    oLI_navbtn_thinking.remove()
+    // oLI_navbtn_thinking.remove()
     oLI_navbtn_and.remove()
     oLI_navbtn_tao.remove()
 

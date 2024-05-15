@@ -11,6 +11,31 @@
 
 
 loglist.push({
+    'title':'会跳舞的科赫',
+    'slug':'dancingkoch',
+    'date':"2024.05.15",
+    'log_content':[
+        "又算了一遍，还特意做了张图",
+        "就算到此ii游吧。",
+        "对了，拖动鼠标koch才会跳舞哦。",
+    ],
+    'p5s':4,
+    'show':true
+})
+
+loglist.push({
+    'title':'js-turtle',
+    'slug':'jsturtlekoch',
+    'date':"2024.05.15",
+    'log_content':[
+        "找了一个js版的turtle，",
+        "看文档似乎还无法获取上下文的位置和角度，目测无法完成。",
+    ],
+    'p5s':3,
+    'show':true
+})
+
+loglist.push({
     'title':'坏科赫曲线',
     'slug':'koch',
     'date':"2024.05.15",
