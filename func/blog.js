@@ -3,7 +3,7 @@
 function listblog(){
     document.body.classList = "log"
 
-    pmArr_logs = loglist
+    pmArr_logs = loglist.reverse()
     // loglist was defined in "main.js"
     
     let content_wrapper = document.querySelector("#ul_content_list")

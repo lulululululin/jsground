@@ -49,14 +49,11 @@ function page_main(){
         thinking()
     })
 
-    
     // oLI_navbtn_thinking.remove()
     oLI_navbtn_and.remove()
     oLI_navbtn_tao.remove()
 
     let oUL_contents = create_sth("ul",oDIV_main,"ul_content_list","","contentlistcss");
-
-
 }
 
 let loglist = []

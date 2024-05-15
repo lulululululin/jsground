@@ -10,7 +10,7 @@ let objCvs;  // for Image File Saving.
 
 let aa = [44,411]
 let bb = [555,333]
-let level = 1
+let level = 0
 
 function unitdraw(aa,dd,nn){
 
@@ -144,3 +144,5 @@ function mouseDragged(){
   else if (mouseButton === RIGHT) {
   }
 }
+
+
