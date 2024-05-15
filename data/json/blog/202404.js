@@ -11,11 +11,11 @@
 
 
 loglist.push({
-    'title':'错误的科赫曲线',
+    'title':'坏科赫曲线',
     'slug':'koch',
     'date':"2024.05.15",
     'log_content':[
-        "三角函数解错了。截图留念。",
+        "三角函数解不出来了。截图留念。",
     ],
     'p5s':2,
     'show':true
