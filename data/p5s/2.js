@@ -8,8 +8,9 @@ let sz = cvs.size()
 
 let objCvs;  // for Image File Saving.
 
-let aa = [0,0]
-let bb = [200,222]
+let aa = [666,222]
+let bb = [0,0]
+let level = 1
 
 function unitdraw(aa,dd,nn){
 
@@ -89,13 +90,14 @@ function setup() {
 }
 
 function draw() {
-  unitdraw(aa,bb,1)
+  unitdraw(aa,bb,level)
 }
 
 
 function keyPressed(){
   if (key==" "){
     clear();
+    background(0)
   }
   if (key=="c"){
     noLoop();
