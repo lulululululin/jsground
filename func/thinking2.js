@@ -14,7 +14,7 @@ function thinking(){
     let this_item
 
     for (let itm in last_topic){
-
+        console.log("init moving",ismoving)
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
         this_item = last_topic[itm]
 
@@ -34,16 +34,7 @@ function thinking(){
         
 
         // https://zh.javascript.info/mouse-drag-and-drop
-        node.onmousedown = etdd
-
-        node.addEventListener("mousedown",drgandrp)
-
-        function etdd(event){
-            console.log(event.pageX)
-            console.log("event.pageX")
-            event.preventDefault();
-        }
-        
+        node.onmousedown = drgandrp
         function drgandrp(event){
             console.log("start moving",ismoving)
 

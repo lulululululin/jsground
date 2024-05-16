@@ -55,7 +55,6 @@ function page_main(){
 
     let oUL_contents = create_sth("ul",oDIV_main,"ul_content_list","","contentlistcss");
     oDIV_main.style.minHeight = (window.innerHeight-document.body.querySelector("#main").offsetTop)+"px"
-    console.log("paddingTop: ",document.body.querySelector("#main").offsetTop)
 }
 
 let loglist = []
