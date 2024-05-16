@@ -1,6 +1,6 @@
 // readlist
 let oLI_thinking = []
-
+let ismoving = 0
 function thinking(){
     
     document.body.classList = "think"
@@ -14,6 +14,7 @@ function thinking(){
     let this_item
 
     for (let itm in last_topic){
+        console.log("init moving",ismoving)
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
         this_item = last_topic[itm]
 
@@ -34,6 +35,8 @@ function thinking(){
 
         // https://zh.javascript.info/mouse-drag-and-drop
         node.onmousedown = function(event){
+            console.log("start moving",ismoving)
+
             node.style.visibility = 'hidden'
             event.preventDefault();
 
@@ -42,11 +45,8 @@ function thinking(){
             function moveAt(somenode, pageX, pageY){
                 somenode.style.left = pageX - somenode.offsetWidth / 2 + 'px'
                 somenode.style.top = pageY - somenode.offsetHeight / 2 + 'px'
-
                 
                 wrapperbox = content_wrapper.getBoundingClientRect()
-
-            
 
                 this_item['posi']['xx'] = (parseInt(somenode.style.left) - wrapperbox.x) + "px"
                 this_item['posi']['yy'] = (parseInt(somenode.style.top) - wrapperbox.y) + "px"
@@ -58,19 +58,32 @@ function thinking(){
                 move_thinkNode(node)
             }
 
-            document.addEventListener('mousemove', onMouseMove)
-
-            node.onmouseup = ()=>{
+            function cancleMove(event){
                 document.removeEventListener('mousemove', onMouseMove)
                 node.onmouseup=null
+                node.onmousedown=null
+                ismoving = 0
+                console.log("end moving",ismoving)
             }
             
+            if (ismoving==0){
+                document.addEventListener('mousemove', onMouseMove)
+                ismoving = 1
+            }
 
-            console.log(last_topic)
+            if (ismoving==1){
+                node.onmouseup = ()=>{
+                    cancleMove()
+                }
+                node.onmousedown = ()=>{
+                    cancleMove()
+                }
+            }
+
+            console.log("result moving",ismoving)
+            // console.log(last_topic)
 
         }
-
-
 
         // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
         // https://developer.mozilla.org/en-US/docs/Web/Events
