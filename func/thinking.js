@@ -1,6 +1,7 @@
 // readlist
 let oLI_thinking = []
 let ismoving = 0
+let last_topic
 function thinking(){
     
     document.body.classList = "think"
@@ -17,6 +18,7 @@ function thinking(){
 
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
         this_item = last_topic[itm]
+        this_item['orderid'] = itm
 
         if (this_item['posi']==undefined){
             this_item['posi'] = {}
@@ -25,79 +27,42 @@ function thinking(){
         }
         
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
-        let node = create_sth("li",content_wrapper,"read_itm","<span mean='"+ thoughts[thoughts.length-1][itm]['mean_from_cn'] +"'>"+ thoughts[thoughts.length-1][itm]['eng_word'][0] +"</span>","readitmcss");
+        let node = create_sth("li",content_wrapper,"read_itm","<span orderid='"+itm+"' mean='"+ thoughts[thoughts.length-1][itm]['mean_from_cn'] +"'>"+ thoughts[thoughts.length-1][itm]['eng_word'][0] +"</span>","readitmcss");
         node.classList = "li_Think_node"
         node.style.left = this_item['posi']['xx']
         node.style.top = this_item['posi']['yy']
         node.draggable = true
         oLI_thinking[itm] = node
         
-
         // https://zh.javascript.info/mouse-drag-and-drop
-        node.onmousedown = etdd
-
-        node.addEventListener("mousedown",drgandrp)
 
         function etdd(event){
-            console.log(event.pageX)
-            console.log("event.pageX")
-            event.preventDefault();
-        }
-        
-        function drgandrp(event){
-            console.log("start moving",ismoving)
-
-            node.style.visibility = 'hidden'
+            let theNode = event.target
+            let wrapper = theNode.parentElement.parentElement
+            let wrapperx = wrapper.offsetTop
+            let wrappery = wrapper.offsetLeft
             event.preventDefault();
 
-            document.body.append(node)
-    
-            function moveAt(somenode, pageX, pageY){
-                somenode.style.left = pageX - somenode.offsetWidth / 2 + 'px'
-                somenode.style.top = pageY - somenode.offsetHeight / 2 + 'px'
-                
+            function move_at(event){
+                theNode.style.left = parseInt(event.pageX - wrapperx - theNode.offsetWidth*1.1) + 'px'
+                theNode.style.top = parseInt(event.pageY - wrappery - theNode.offsetHeight*2.1) + 'px'
+
                 wrapperbox = content_wrapper.getBoundingClientRect()
 
-                this_item['posi']['xx'] = (parseInt(somenode.style.left) - wrapperbox.x) + "px"
-                this_item['posi']['yy'] = (parseInt(somenode.style.top) - wrapperbox.y) + "px"
-            }
+                last_topic[this_item['orderid']]['posi']['xx'] = parseInt(event.pageX - wrapperx - theNode.offsetWidth*1.1) + 'px'
+                last_topic[this_item['orderid']]['posi']['yy'] = parseInt(event.pageY - wrappery - theNode.offsetHeight*2.1) + 'px'
 
-            function onMouseMove(event){
-                moveAt(node, event.pageX, event.pageY)
-                node.style.visibility = 'visible'
-                move_thinkNode(node)
             }
+            document.addEventListener("mousemove",move_at)
 
             function cancleMove(event){
-                document.removeEventListener('mousemove', onMouseMove)
-                node.onmouseup=null
-                node.onmousedown=null
-                ismoving = 0
-                console.log("end moving",ismoving)
+                document.removeEventListener('mousemove', move_at)
             }
-            
-            if (ismoving==0){
-                document.addEventListener('mousemove', onMouseMove)
-                ismoving = 1
-            }
-
-            if (ismoving==1){
-                node.onmouseup = ()=>{
-                    cancleMove()
-                }
-                node.onmousedown = ()=>{
-                    cancleMove()
-                }
-            }
-
-            console.log("result moving",ismoving)
-            // console.log(last_topic)
-
+            document.addEventListener("mouseup",cancleMove)
+            console.log(last_topic)
         }
-
-        // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-        // https://developer.mozilla.org/en-US/docs/Web/Events
-        // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent
+        node.addEventListener("mousedown",etdd,true)
+        
     }
 }
 
