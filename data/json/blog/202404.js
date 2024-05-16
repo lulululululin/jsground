@@ -10,6 +10,22 @@
 // }) 
 
 
+letian.push({
+    'title':'学习编程',
+    'slug':'learn2code',
+    'date':"2024.05.16",
+    'log_content':[
+        "\
+        这几年我的主业就是学习编程。 \n \
+        当然我从事主业的时间也并不是很多。 \n \
+        之所以我能够选择这个主业，\n \
+        是因为考虑到学习的风险还是比较小。\n \
+        ",
+    ],
+    'p5s':null,
+    'show':true
+})
+
 loglist.push({
     'title':'会跳舞的科赫',
     'slug':'dancingkoch',

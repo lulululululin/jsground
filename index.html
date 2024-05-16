@@ -7,6 +7,7 @@
 
     <script src="./func/predefine.js?(+86)18686868742"></script>
     <script src="./func/lib_page.js?(+86)18686868742"></script>
+    <script src="./func/page.js?(+86)18686868742"></script>
     <script src="./func/main.js?(+86)18686868742"></script>
     <script src="./func/blog.js?(+86)18686868742"></script>
     <script src="./func/read.js?(+86)18686868742"></script>
@@ -24,6 +25,27 @@
             page_main()
             listblog()
             commonfooter()
+                        
+            // console.log((document.querySelector("#divfooter")))
+
+            for (ll of lll){
+                for (mm of mmm){
+                    for (nn of nnn){
+                        try {
+                            if (eval(ll+"."+mm+nn)!=undefined){
+                                console.log((ll+"."+mm+nn))
+                                console.log(eval(ll+"."+mm+nn))
+                            }
+                        } catch (error) {
+                            // console.log("ERR!!!!!")
+                            // console.log((ll+"."+mm+nn,error))
+                            // console.log()
+                            // console.log()
+                        }
+                    }
+                }
+            }
+
         }
     </script>
 </head>
