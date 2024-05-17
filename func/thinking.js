@@ -27,7 +27,7 @@ function thinking(){
         }
         
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
-        let node = create_sth("li",content_wrapper,"read_itm",""+ thoughts[thoughts.length-1][itm]['eng_word'][0] +"","readitmcss");
+        let node = create_sth("li",content_wrapper,"think_item"+itm,""+ thoughts[thoughts.length-1][itm]['eng_word'][0] +"","readitmcss");
         node.classList = "li_Think_node"
         node.setAttribute( "orderid", itm )
         node['orderid']=itm
@@ -51,6 +51,8 @@ function thinking(){
             function move_at(event){
                 theNode.style.left = parseInt(event.pageX - wrapperx - theNode.offsetWidth*0.5) + 'px'
                 theNode.style.top = parseInt(event.pageY - wrappery - theNode.offsetHeight*0.5) + 'px'
+
+                theNode.classList = "li_Think_node moveditem"
 
                 wrapperbox = content_wrapper.getBoundingClientRect()
 
