@@ -22,13 +22,17 @@ function thinking(){
 
         if (this_item['posi']==undefined){
             this_item['posi'] = {}
-            this_item['posi']['xx'] = parseInt(Math.random()*window.innerWidth*0.76)+"px"
-            this_item['posi']['yy'] = parseInt(Math.random()*(window.innerHeight - window.innerWidth*0.24-150))+"px"
+            this_item['posi']['xx'] = parseInt(Math.random()*640)+"px"
+            this_item['posi']['yy'] = parseInt(Math.random()*(640/4*3))+"px"
         }
         
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
-        let node = create_sth("li",content_wrapper,"read_itm","<span orderid='"+itm+"' mean='"+ thoughts[thoughts.length-1][itm]['mean_from_cn'] +"'>"+ thoughts[thoughts.length-1][itm]['eng_word'][0] +"</span>","readitmcss");
+        let node = create_sth("li",content_wrapper,"read_itm",""+ thoughts[thoughts.length-1][itm]['eng_word'][0] +"","readitmcss");
         node.classList = "li_Think_node"
+        node.setAttribute( "orderid", itm )
+        node['orderid']=itm
+        node.setAttribute( "mean", thoughts[thoughts.length-1][itm]['mean_from_cn'] )
+        node['mean']=thoughts[thoughts.length-1][itm]['mean_from_cn']
         node.style.left = this_item['posi']['xx']
         node.style.top = this_item['posi']['yy']
         node.draggable = true
@@ -38,19 +42,22 @@ function thinking(){
 
         function etdd(event){
             let theNode = event.target
-            let wrapper = theNode.parentElement.parentElement
-            let wrapperx = wrapper.offsetTop
-            let wrappery = wrapper.offsetLeft
+            let wrapper = theNode.parentElement
+            let wrappery = wrapper.offsetTop
+            let wrapperx = wrapper.offsetLeft
+            console.log(wrapperx,wrappery)
             event.preventDefault();
 
             function move_at(event){
-                theNode.style.left = parseInt(event.pageX - wrapperx - theNode.offsetWidth*1.1) + 'px'
-                theNode.style.top = parseInt(event.pageY - wrappery - theNode.offsetHeight*2.1) + 'px'
+                theNode.style.left = parseInt(event.pageX - wrapperx - theNode.offsetWidth*0.5) + 'px'
+                theNode.style.top = parseInt(event.pageY - wrappery - theNode.offsetHeight*0.5) + 'px'
 
                 wrapperbox = content_wrapper.getBoundingClientRect()
 
-                last_topic[this_item['orderid']]['posi']['xx'] = parseInt(event.pageX - wrapperx - theNode.offsetWidth*1.1) + 'px'
-                last_topic[this_item['orderid']]['posi']['yy'] = parseInt(event.pageY - wrappery - theNode.offsetHeight*2.1) + 'px'
+                // console.log(last_topic[theNode['orderid']])
+
+                last_topic[theNode['orderid']]['posi']['xx'] = parseInt(event.pageX - wrapperx) + 'px'
+                last_topic[theNode['orderid']]['posi']['yy'] = parseInt(event.pageY - wrappery) + 'px'
 
             }
             document.addEventListener("mousemove",move_at)
@@ -59,9 +66,11 @@ function thinking(){
                 document.removeEventListener('mousemove', move_at)
             }
             document.addEventListener("mouseup",cancleMove)
+            // console.clear()
             console.log(last_topic)
         }
-        node.addEventListener("mousedown",etdd,true)
+        node.onmousedown = etdd
+        // node.addEventListener("mousedown",etdd,true)
         
     }
 }

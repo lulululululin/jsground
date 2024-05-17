@@ -14,7 +14,7 @@ function thinking(){
     let this_item
 
     for (let itm in last_topic){
-        console.log("init moving",ismoving)
+
         // create_sth(tagname,parentTagObj,id,innerhtml,css_class_litms)
         this_item = last_topic[itm]
 
