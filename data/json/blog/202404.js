@@ -11,6 +11,20 @@
 
 
 loglist.push({
+    'title':'Chatgpt解答此题',
+    'slug':'chatgptmath',
+    'date':"2024.05.21",
+    'log_content':[
+        "今天突然想起来可以去问问chatgpt这个题的答案",
+        "把最终结果的公式塞到程序里，也是似是而非。",
+    ],
+    'p5s':6,
+    'md':false,
+    'show':true
+})
+
+
+loglist.push({
     'title':'对称的神经',
     'slug':'money',
     'date':"2024.05.17",

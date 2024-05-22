@@ -22,10 +22,20 @@ function listblog(){
         pmLI_log.appendChild(oDIV_date)
     }
 
-    let fLog_paragraph = (pmARR_paragraphs, pmINT_show=3, pmLI_log)=>{
-        for (idx in pmARR_paragraphs) {
+    let fLog_paragraph = (pm, pmLI_log)=>{
 
-            let oP_1para = document.createElement("p")
+        pmINT_show = pm["show"]
+        let oP_1para
+        if (pm['md']==true){
+            pmARR_paragraphs = marked.parse(pm["log_content"][0]).split("\\\r")
+        }
+        else {
+            pmARR_paragraphs = pm["log_content"]
+            console.log(pmARR_paragraphs)
+        }
+            
+        for (idx in pmARR_paragraphs) {
+            oP_1para = document.createElement("div")
             oP_1para.innerHTML = pmARR_paragraphs[idx]
 
             pmLI_log.appendChild(oP_1para)
@@ -43,6 +53,7 @@ function listblog(){
                 break
             }
         }
+
     }
 
     let fLog_p5s = (pmStr_date,pmLI_log)=>{
@@ -67,7 +78,9 @@ function listblog(){
         fLog_date(pmOjb_content['date'],oLI_log)
 
         fLog_p5s(pmOjb_content['p5s'],oLI_log)
-        fLog_paragraph(pmOjb_content['log_content'],pmOjb_content['show'],oLI_log)
+        fLog_paragraph(pmOjb_content,oLI_log)
+
+
 
         listRoot.appendChild(oLI_log)
 
