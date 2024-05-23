@@ -11,6 +11,19 @@
 
 
 loglist.push({
+    'title':'Countless Bad Koch',
+    'slug':'chatgptmath',
+    'date':"2024.05.21",
+    'log_content':[
+        "",
+    ],
+    'p5s':7,
+    'md':false,
+    'show':true
+})
+
+
+loglist.push({
     'title':'Chatgpt解答此题',
     'slug':'chatgptmath',
     'date':"2024.05.21",
