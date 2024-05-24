@@ -8,9 +8,12 @@ let sz = cvs.size()
 
 let objCvs;  // for Image File Saving.
 
-let aa = [40,240]
-let bb = [600,240]
-let level = 5
+let aa = [200,200]
+let bb = [440,200]
+let level = 3
+
+let fct1 = 0.5
+let fct2 = 0.5
 
 function unitdraw(aa,dd,nn){
 
@@ -41,7 +44,7 @@ function unitdraw(aa,dd,nn){
     }
     
     function geteeff(){
-      let eeff = (((dd[0]-aa[0])**2+(dd[1]-aa[1])**2)**0.5)/2*(3**0.5)
+      let eeff = (((dd[0]-aa[0])**2+(dd[1]-aa[1])**2)**fct2)/2*(3**fct1)
       return eeff
     }
 
@@ -68,8 +71,8 @@ function unitdraw(aa,dd,nn){
       unitdraw(cc,dd,nn-1)
     }
     else {
-      strokeWeight(1)
-      stroke(255,30)
+      strokeWeight(10)
+      stroke(255,7)
       line(...aa,...bb)
       line(...bb,...ee)
       line(...ee,...cc)
@@ -136,13 +139,15 @@ function mouseReleased(){
 function mouseDragged(){
   if (mouseButton === LEFT) {
     background(0,25)
-    bb = [mouseX,sz[1]*0.36]
-    aa = [sz[0]-mouseX,sz[1]*0.36]
-
-    level = 0 + mouseY*8/sz[1]
+    fct1 = (1 + mouseY*99/sz[1])*0.01
+    fct2 = (1 + mouseX*99/sz[0])*0.01
   }
   else if (mouseButton === CENTER) {
     background(0,25)
+    // bb = [mouseX,sz[1]*0.35]
+    // aa = [sz[0]-mouseX,sz[1]*0.35]
+
+    level = 0 + mouseY*5/sz[1]
   }
   else if (mouseButton === RIGHT) {
   }
